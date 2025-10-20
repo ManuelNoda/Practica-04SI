@@ -72,6 +72,18 @@ Es importante que los **colliders de los escudos** estén configurados con la op
 
 ![gif5](./videos_escenarios/Practica4-ejer5.gif)
 
+## Interfaz de Puntuación
+
+Para este ejercicio hemos creado un **Canvas** con un **TextMeshPro** que sirve como interfaz para mostrar cómo **aumentan los puntos** al recolectar los escudos.  
+Para ello utilizamos los scripts **`PuntuacionUI`** y una versión modificada del script de **`recoleccion`.
+
+El script **`recoleccion`** se encarga de detectar cuando el **cubo** entra en contacto con un escudo (mediante un *trigger*).  
+Según el tipo de escudo, se asignan los puntos correspondientes.Cada vez que se recolecta un escudo, se llama al método `SumarPuntos()` del script **`PuntuacionUI`**, el cual **actualiza el texto en pantalla**.
+
+El script **`PuntuacionUI`** mantiene el **contador total de puntos** y actualiza el valor en el **TextMeshPro** del Canvas. 
+
+![gif6](./videos_escenarios/Practica4-ejer6.gif)
+
   
 
 
