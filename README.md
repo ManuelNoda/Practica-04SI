@@ -43,5 +43,23 @@ En conjunto, estos scripts permiten crear un **sistema de interacción** en el q
 
 ![gif3](./videos_escenarios/Practica4-ejer3.gif)
 
+## Guerreros y Magos 3 (Teletransportación y Orientación)
+
+En este caso no hacemos que los NPC se desplacen gradualmente (como en los ejercicios anteriores), sino que los **guerreros** se **teletransportan directamente** a la posición de los **escudos** previamente asignados, mientras que los **magos** se **orientan hacia la dirección del cilindro**, que es el objeto que maneja este evento.
+
+Para lograrlo, utilizamos nuevamente el **script `Event`** como sistema local de comunicación, y un nuevo script llamado **`HumanoideAccionMOV4`**, que reemplaza el movimiento progresivo por acciones instantáneas de teletransportación y orientación.
+
+El script **`HumanoideAccionMOV4`** está suscrito al evento local del cilindro.  
+Cuando el evento se activa:
+
+- Los **NPC del tipo 1 (guerreros)** se **teletransportan inmediatamente** a la posición de su escudo asignado.  
+- Los **NPC del tipo 2 (magos)** se **orientan** mirando hacia el cilindro, ajustando su rotación para apuntar en esa dirección.
+
+El script utiliza una referencia al **tipo de NPC** mediante el componente `HumanoideTypeIdentifier`, y en la función de reacción (`Reaccionar`) decide qué acción realizar según si el personaje es del tipo 1 o del tipo 2.
+
+De esta forma, los eventos vuelven a coordinar el comportamiento entre distintos tipos de NPC, pero esta vez implementando **acciones instantáneas** como la teletransportación y la orientación, en lugar de movimiento progresivo.
+
+![gif4](./videos%20escenarios/Practica4-ejer4.gif)
+
 
 
