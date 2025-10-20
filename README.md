@@ -84,7 +84,27 @@ El script **`PuntuacionUI`** mantiene el **contador total de puntos** y actualiz
 
 ![gif6](./videos_escenarios/Practica4-ejer6.gif)
 
-  
+## Obtener premio por pantalla
 
+Esta mecánica es muy similar a la del apartado anterior de **Interfaz de Puntuación**, pero ahora nos enfocamos en la **notificación de premio** que aparece cuando el jugador alcanza los **100 puntos**.  
+
+Cada vez que se suman puntos, el método `SumarPuntos()` del script **`PuntuacionUI`** **actualiza el contador en pantalla**.  
+Cuando el total de puntos alcanza un **múltiplo de 100**, se activa un **mensaje de premio** en el Canvas para notificar al jugador que ha alcanzado esta meta.  
+Este mensaje aparece de manera temporal y se oculta automáticamente después de unos segundos.  
+
+![gif7](./videos_escenarios/Practica4-Ejer7.gif)
+
+## Recoleccion de Espadas
+
+  Se añadido unos asset de la store de Unity de espadas, especificamente el ** Espadas de baja poligonización - Armas de rol**, y se les  a añadido los scrips de los escudos, para que el personaje pueda recolectar espadas
+  y estas les den puntos, y añadir un color al terreno (que me di cuenta de que no lo puse al final disculpe las molestias).
+
+![gif8](./videos_escenarios/Practica4-ejer8.gif)
+
+## Cubo Fisico
+  Es exactamente igual que el 3 ejercicio , pero el cubo siendo fisico ( en mi caso ya lo era).
+
+  ![gif3](./videos_escenarios/Practica4-ejer3.gif)
+  
 
 
