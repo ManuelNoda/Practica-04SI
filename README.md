@@ -47,9 +47,9 @@ En conjunto, estos scripts permiten crear un **sistema de interacción** en el q
 
 En este caso no hacemos que los NPC se desplacen gradualmente (como en los ejercicios anteriores), sino que los **guerreros** se **teletransportan directamente** a la posición de los **escudos** previamente asignados, mientras que los **magos** se **orientan hacia la dirección del cilindro**, que es el objeto que maneja este evento.
 
-Para lograrlo, utilizamos nuevamente el **script `Event`** como sistema local de comunicación, y un nuevo script llamado **`HumanoideAccionMOV4`**, que reemplaza el movimiento progresivo por acciones instantáneas de teletransportación y orientación.
+Para lograrlo, utilizamos nuevamente el **script `Event`** como sistema local de comunicación, y un nuevo script llamado **`HumanoideMOV4`**, que reemplaza el movimiento progresivo por acciones instantáneas de teletransportación y orientación.
 
-El script **`HumanoideAccionMOV4`** está suscrito al evento local del cilindro.  
+El script **`HumanoideMOV4`** está suscrito al evento local del cilindro.  
 Cuando el evento se activa:
 
 - Los **NPC del tipo 1 (guerreros)** se **teletransportan inmediatamente** a la posición de su escudo asignado.  
@@ -59,7 +59,20 @@ El script utiliza una referencia al **tipo de NPC** mediante el componente `Huma
 
 De esta forma, los eventos vuelven a coordinar el comportamiento entre distintos tipos de NPC, pero esta vez implementando **acciones instantáneas** como la teletransportación y la orientación, en lugar de movimiento progresivo.
 
-![gif4](./videos%20escenarios/Practica4-ejer4.gif)
+![gif4](./videos_escenarios/Practica4-ejer4.gif)
+
+## Recolección de Escudos
+
+En este caso, nuestro personaje **cubo** debe **recolectar los distintos escudos** que hay en la escena.  
+Los **escudos de tipo 1** otorgan **5 puntos**, mientras que los **escudos de tipo 2** otorgan **10 puntos**.
+
+Para implementar esta mecánica se utiliza el **script `recolectar` (versión antigua)**, que permite que cada vez que el cubo toque un escudo, este **sume su cantidad de puntos correspondiente** y luego **desaparezca de la escena** (el objeto es destruido).
+
+Es importante que los **colliders de los escudos** estén configurados con la opción **`Is Trigger`** activada, para que el evento de recolección se detecte correctamente cuando el cubo entre en contacto con ellos.
+
+![gif5](./videos_escenarios/Practica4-ejer5.gif)
+
+  
 
 
 
